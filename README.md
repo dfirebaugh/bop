@@ -8,7 +8,7 @@ i.e. you can just drop in `src/bop.js` into your project.
 
 ### cdn
 
-```html
+```js
 import { registerElement } from "https://cdn.jsdelivr.net/gh/dfirebaugh/bop@main/src/bop.js";
 ```
 
