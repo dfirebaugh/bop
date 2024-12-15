@@ -1,0 +1,74 @@
+:root {
+  --catppuccin-mocha: #1e1e2e;
+  --catppuccin-latte: #f5e0dc;
+  --catppuccin-frappe: #303446;
+  --catppuccin-macchiato: #24273a;
+  --catppuccin-text: #c6d0f5;
+  --catppuccin-text-dark: #24273a;
+  --catppuccin-primary: #f38ba8;
+  --catppuccin-secondary: #a6e3a1;
+  --catppuccin-accent: #f5c2e7;
+}
+
+body {
+  background-color: var(--catppuccin-mocha);
+  color: var(--catppuccin-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  color: var(--catppuccin-text);
+}
+
+pre {
+  background-color: var(--catppuccin-frappe);
+}
+
+.navbar,
+.hero,
+.section,
+.footer {
+  background-color: var(--catppuccin-frappe);
+  color: var(--catppuccin-text);
+}
+
+.button.is-primary {
+  background-color: var(--catppuccin-primary);
+  border-color: var(--catppuccin-primary);
+  color: var(--catppuccin-text-dark);
+}
+
+.button.is-info {
+  background-color: var(--catppuccin-secondary);
+  border-color: var(--catppuccin-secondary);
+  color: var(--catppuccin-text-dark);
+}
+
+.box {
+  margin-top: 2rem;
+  background-color: var(--catppuccin-macchiato);
+  color: var(--catppuccin-text);
+}
+
+.notification {
+  background-color: var(--catppuccin-accent);
+  color: var(--catppuccin-text);
+}
+
+input,
+textarea,
+select {
+  background-color: var(--catppuccin-macchiato);
+  color: var(--catppuccin-text);
+  border-color: var(--catppuccin-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--catppuccin-text);
+}

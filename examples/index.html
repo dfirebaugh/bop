@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css"
+    />
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/languages/go.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="//unpkg.com/@catppuccin/highlightjs@1.0.0/css/catppuccin-frappe.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.3/purify.min.js"
+      integrity="sha512-Ll+TuDvrWDNNRnFFIM8dOiw7Go7dsHyxRp4RutiIFW/wm3DgDmCnRZow6AqbXnCbpWu93yM1O34q+4ggzGeXVA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="/style.css" />
+
+    <script type="module" src="/index.js"></script>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div id="alert-example" class="box">
+          <example-element title="testing">
+            <h2 class="title is-2">Other</h2>
+          </example-element>
+
+          <collapsible-container>
+            <code-viewer src="/components/ExampleElement.js"> </code-viewer>
+          </collapsible-container>
+        </div>
+
+        <div class="box">
+          <click-counter></click-counter>
+          <collapsible-container>
+            <code-viewer src="/components/ClickCounter.js"> </code-viewer>
+          </collapsible-container>
+        </div>
+
+        <div class="box">
+          <user-card name="John Doe" age="30"></user-card>
+
+          <collapsible-container>
+            <code-viewer src="/components/UserCard.js"> </code-viewer>
+          </collapsible-container>
+        </div>
+
+        <div class="box">
+          <progress-bar></progress-bar>
+
+          <collapsible-container>
+            <code-viewer src="/components/ProgressBar.js"> </code-viewer>
+          </collapsible-container>
+        </div>
+
+        <div id="alert-example" class="box">
+          <alert-message
+            message="This is an alert!"
+            type="warning"
+          ></alert-message>
+
+          <collapsible-container>
+            <code-viewer src="/components/AlertMessage.js"> </code-viewer>
+          </collapsible-container>
+        </div>
+
+        <div class="box">
+          <todo-list></todo-list>
+
+          <collapsible-container>
+            <code-viewer src="/components/TodoList.js"> </code-viewer>
+          </collapsible-container>
+        </div>
+        <div class="box">
+          <toggle-switch></toggle-switch>
+          <collapsible-container>
+            <code-viewer src="/components/ToggleSwitch.js"> </code-viewer>
+          </collapsible-container>
+        </div>
+
+        <div class="box">
+          <button-example title="button 1"></button-example>
+          <button-example title="button 2"></button-example>
+          <collapsible-container>
+            <code-viewer src="/components/ButtonExample.js"> </code-viewer>
+          </collapsible-container>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
