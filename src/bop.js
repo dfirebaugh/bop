@@ -25,16 +25,16 @@ export function registerElement(element, injections) {
       this.context = {
         attributes: {},
         lifecycles: {},
-        setOnConnectedCallback(callback) {
+        onConnected(callback) {
           this.lifecycles.connectedCallback = callback;
         },
-        setOnDisconnectedCallback(callback) {
+        onDisconnected(callback) {
           this.lifecycles.disconnectedCallback = callback;
         },
-        setOnAttributeChangedCallback(callback) {
+        onAttributeChanged(callback) {
           this.lifecycles.attributeChangedCallback = callback;
         },
-        setObservedAttributes(attributes) {
+        observedAttributes(attributes) {
           this.lifecycles.observedAttributes = attributes;
         },
         renderChildren() {
@@ -48,7 +48,6 @@ export function registerElement(element, injections) {
               .join("") || ""
           );
         },
-        injections: injections,
       };
 
       const attributes = Array.from(this.attributes).reduce((acc, attr) => {
@@ -61,7 +60,7 @@ export function registerElement(element, injections) {
       const originalChildren = Array.from(this.childNodes);
       this.context.children = originalChildren.map((child) => child.cloneNode(true));
 
-      this.context.render = element(this.context);
+      this.context.render = element(Object.assign(this.context, injections));
 
       this.context.update = () => {
         this.context.dom.innerHTML = this.context.render();

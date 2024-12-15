@@ -1,7 +1,7 @@
 export default function ProgressBar(ctx) {
   let progress = 0;
 
-  ctx.setOnConnectedCallback(function () {
+  ctx.onConnected(function () {
     ctx.update();
 
     ctx.dom.addEventListener("click", (event) => {

@@ -9,7 +9,7 @@ import TodoList from "./components/TodoList.js";
 import CollapsibleContainer from "./components/CollapsibleContainer.js";
 import CodeViewer from "./components/CodeViewer.js";
 
-import { registerElement } from "../src/registry.js";
+import { registerElement } from "./src/bop.js";
 
 const NameService = {
   getName: () => "jerry",

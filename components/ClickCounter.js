@@ -1,7 +1,7 @@
 export default function ClickCounter(ctx) {
   let clickCount = 0;
 
-  ctx.setOnConnectedCallback(function () {
+  ctx.onConnected(function () {
     ctx.update();
 
     ctx.dom.addEventListener("click", (event) => {
@@ -10,10 +10,6 @@ export default function ClickCounter(ctx) {
         ctx.update();
       }
     });
-  });
-
-  ctx.setOnDisconnectedCallback(() => {
-    console.log("ClickCounter removed from the DOM");
   });
 
   return () => {

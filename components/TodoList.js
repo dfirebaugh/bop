@@ -1,7 +1,7 @@
 export default function TodoList(ctx) {
   let todos = [];
 
-  ctx.setOnConnectedCallback(function () {
+  ctx.onConnected(function () {
     ctx.update();
 
     ctx.dom.addEventListener("submit", (event) => {
@@ -21,10 +21,6 @@ export default function TodoList(ctx) {
         ctx.update();
       }
     });
-  });
-
-  ctx.setOnDisconnectedCallback(() => {
-    console.log("TodoList removed from the DOM");
   });
 
   return () => {

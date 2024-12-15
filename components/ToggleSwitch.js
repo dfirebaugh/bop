@@ -1,7 +1,7 @@
 export default function ToggleSwitch(ctx) {
   let isChecked = false;
 
-  ctx.setOnConnectedCallback(function () {
+  ctx.onConnected(function () {
     ctx.update();
 
     ctx.dom.addEventListener("click", (event) => {

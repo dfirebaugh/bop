@@ -1,7 +1,7 @@
 export default function CollapsibleContainer(ctx) {
   let isCollapsed = true;
 
-  ctx.setOnConnectedCallback(function () {
+  ctx.onConnected(function () {
     ctx.update();
 
     ctx.dom.addEventListener("click", (event) => {
@@ -12,7 +12,7 @@ export default function CollapsibleContainer(ctx) {
     });
   });
 
-  ctx.setOnDisconnectedCallback(() => {
+  ctx.onDisconnected(() => {
     console.log("CollapsibleContainer removed from the DOM");
   });
 

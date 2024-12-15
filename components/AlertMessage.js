@@ -1,7 +1,7 @@
 export default function AlertMessage(ctx) {
   const { message, type } = ctx.attributes;
 
-  ctx.setOnAttributeChangedCallback(function (name, oldValue, newValue) {
+  ctx.onAttributeChanged(function (name, oldValue, newValue) {
     console.log(
       `Attribute changed: ${name} from "${oldValue}" to "${newValue}"`,
     );

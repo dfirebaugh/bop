@@ -20,7 +20,7 @@ function highlight(ctx) {
 
 export default function CodeViewer(ctx) {
   let AlertMessage = `const hello = 1;`;
-  ctx.setOnConnectedCallback(function () {
+  ctx.onConnected(function () {
     ctx.update();
 
     fetch(ctx.attributes.src)

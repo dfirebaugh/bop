@@ -13,8 +13,7 @@ func main() {
 		port = envPort
 	}
 
- 	http.Handle("/src/", http.StripPrefix("/src/", http.FileServer(http.Dir("./src"))))
-  http.Handle("/", http.FileServer(http.Dir("./examples/")))
+  http.Handle("/", http.FileServer(http.Dir(".")))
 
   println("listening on :"+port)
   if err := http.ListenAndServe(":"+port, nil); err != nil {
