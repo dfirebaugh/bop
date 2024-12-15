@@ -6,6 +6,14 @@ i.e. you can just drop in `src/bop.js` into your project.
 
 ## Quick Start
 
+### cdn
+
+```html
+import { registerElement } from "https://cdn.jsdelivr.net/gh/dfirebaugh/bop@main/src/bop.js";
+```
+
+### example
+
 Here’s an example of using `bop` to create and use a custom web component:
 
 ```html
@@ -15,19 +23,15 @@ Here’s an example of using `bop` to create and use a custom web component:
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Example</title>
-
-    <script type="module" src="./src/bop.js"></script>
   </head>
   <body>
-    <example-element title="bop"></example-element>
-
+    <example-element name="bop" />
     <script type="module">
-      import { registerElement } from "./src/bop.js";
+      import { registerElement } from "https://cdn.jsdelivr.net/gh/dfirebaugh/bop@main/src/bop.js";
 
       function ExampleElement(ctx) {
-        const { title } = ctx.attributes;
-
-        return () => `<h1>Hello, ${title}!</h1>`;
+        const { name } = ctx.attributes;
+        return () => `<h1>Hello, ${name}!</h1>`;
       }
 
       registerElement(ExampleElement);

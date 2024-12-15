@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Example</title>
-
-    <script type="module" src="./src/bop.js"></script>
   </head>
   <body>
     <example-element name="bop" />
     <script type="module">
-      import { registerElement } from "./src/bop.js";
+      import { registerElement } from "https://cdn.jsdelivr.net/gh/dfirebaugh/bop@main/src/bop.js";
 
       function ExampleElement(ctx) {
         const { name } = ctx.attributes;
