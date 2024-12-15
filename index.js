@@ -27,4 +27,3 @@ registerElement(AlertMessage);
 registerElement(TodoList);
 registerElement(CollapsibleContainer);
 registerElement(CodeViewer);
-

@@ -34,6 +34,9 @@ export function registerElement(element, injections) {
         onAttributeChanged(callback) {
           this.lifecycles.attributeChangedCallback = callback;
         },
+        onAdopted(callback) {
+          this.lifecycles.adoptedCallback = callback;
+        },
         observedAttributes(attributes) {
           this.lifecycles.observedAttributes = attributes;
         },
@@ -58,7 +61,9 @@ export function registerElement(element, injections) {
       this.context.dom = this;
 
       const originalChildren = Array.from(this.childNodes);
-      this.context.children = originalChildren.map((child) => child.cloneNode(true));
+      this.context.children = originalChildren.map((child) =>
+        child.cloneNode(true),
+      );
 
       this.context.render = element(Object.assign(this.context, injections));
 
