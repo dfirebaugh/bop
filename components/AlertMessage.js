@@ -9,12 +9,10 @@ export default function AlertMessage(ctx) {
     ctx.update();
   });
 
-  return () => {
-    return `
+  return () => `
       <div class="notification is-${type || "info"}">
         <button class="delete"></button>
         ${message || "This is an alert message!"}
       </div>
     `;
-  };
 }

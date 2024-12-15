@@ -32,9 +32,8 @@ export default function CodeViewer(ctx) {
       });
   });
 
-  return () => {
-    return `<pre><code class="language-javascript">${sanitize(
+  return () =>
+    `<pre><code class="language-javascript">${sanitize(
       AlertMessage.trim(),
     )}</code></pre>`;
-  };
 }

@@ -16,8 +16,7 @@ export default function CollapsibleContainer(ctx) {
     console.log("CollapsibleContainer removed from the DOM");
   });
 
-  return () => {
-    return `
+  return () => `
       <div class="box">
         <button id="toggle-collapse" class="button is-primary">
           ${isCollapsed ? "Show" : "Hide"} Code
@@ -27,5 +26,4 @@ export default function CollapsibleContainer(ctx) {
         </div>
       </div>
     `;
-  };
 }

@@ -12,11 +12,9 @@ export default function ProgressBar(ctx) {
     });
   });
 
-  return () => {
-    return `
+  return () => `
         <h1 class="title is-4">Progress Bar</h1>
         <progress class="progress is-primary" value="${progress}" max="100">${progress}%</progress>
         <button id="increase-progress" class="button is-info">Increase Progress</button>
     `;
-  };
 }

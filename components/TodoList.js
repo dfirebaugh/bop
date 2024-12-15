@@ -23,8 +23,7 @@ export default function TodoList(ctx) {
     });
   });
 
-  return () => {
-    return `
+  return () => `
         <h1 class="title is-4">Todo List</h1>
         <form>
           <div class="field">
@@ -46,5 +45,4 @@ export default function TodoList(ctx) {
             .join("")}
         </ul>
     `;
-  };
 }

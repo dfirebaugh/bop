@@ -12,11 +12,9 @@ export default function ClickCounter(ctx) {
     });
   });
 
-  return () => {
-    return `
+  return () => `
         <h1 class="title is-4">Click Counter</h1>
         <p id="click-count">You clicked the button ${clickCount} times.</p>
         <button id="increment-btn" class="button is-info">Click Me!</button>
     `;
-  };
 }

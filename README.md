@@ -2,6 +2,8 @@
 
 `bop` is a no-build JavaScript library for creating web components.
 
+i.e. you can just drop in `src/bop.js` into your project.
+
 ## Quick Start
 
 Here’s an example of using `bop` to create and use a custom web component:
