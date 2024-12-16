@@ -2,8 +2,6 @@ export default function ProgressBar(ctx) {
   let progress = 0;
 
   ctx.onConnected(function () {
-    ctx.update();
-
     ctx.dom.addEventListener("click", (event) => {
       if (event.target.id === "increase-progress") {
         progress = Math.min(progress + 10, 100);

@@ -2,8 +2,6 @@ export default function TodoList(ctx) {
   let todos = [];
 
   ctx.onConnected(function () {
-    ctx.update();
-
     ctx.dom.addEventListener("submit", (event) => {
       event.preventDefault();
       const input = event.target.querySelector("#new-todo");

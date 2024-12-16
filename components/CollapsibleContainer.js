@@ -2,8 +2,6 @@ export default function CollapsibleContainer(ctx) {
   let isCollapsed = true;
 
   ctx.onConnected(function () {
-    ctx.update();
-
     ctx.dom.addEventListener("click", (event) => {
       if (event.target.id === "toggle-collapse") {
         isCollapsed = !isCollapsed;

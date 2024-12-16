@@ -2,8 +2,6 @@ export default function ClickCounter(ctx) {
   let clickCount = 0;
 
   ctx.onConnected(function () {
-    ctx.update();
-
     ctx.dom.addEventListener("click", (event) => {
       if (event.target.id === "increment-btn") {
         clickCount++;
